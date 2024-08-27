@@ -6,7 +6,7 @@ export default {
     extend: {
       colors: {
         'bg-dark-theme': '#070F2B',
-        'primary-color': '#F97316'
+        'primary-color': '#F97316',
       }
     },
   },

@@ -6,8 +6,9 @@ function ThemeSelector() {
   const isDark = theme === "dark";
   function handleTheme() {
     const themeValue = theme == "dark" ? "light" : "dark";
+    const rootElement = document.documentElement;
     setTheme(themeValue);
-    document.documentElement.setAttribute("data-theme", themeValue);
+    rootElement.setAttribute("data-theme", themeValue);
   }
   return (
     <div

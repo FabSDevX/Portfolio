@@ -1,11 +1,11 @@
 {
-    "hello": "hello",
-    "HEADER_NAVBAR": [
-      ["About me", "/dashboard"],
-      ["Projects", "/team"],
-      ["Skils", "/projects"],
-      ["Education", "/reports"],
-      ["Contact", "/reports"]
-    ]
-  }
-  
+  "hello": "hola",
+  "LANGUAGE_CODE": "es",
+  "HEADER_NAVBAR": [
+    ["Sobre mi", "about-me", "person"],
+    ["Proyectos", "projects", "project"],
+    ["Skills", "skills", "skill"],
+    ["Educación", "education", "education"],
+    ["Contacto", "contact", "contact"]
+  ]
+}

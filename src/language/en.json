@@ -1,10 +1,12 @@
 {
+
   "hello": "hello",
+  "LANGUAGE_CODE": "en",
   "HEADER_NAVBAR": [
-    ["About me", "/aboutMe"],
-    ["Projects", "/projects"],
-    ["Skils", "/skills"],
-    ["Education", "/education"],
-    ["Contact", "/contact"]
+    ["About me", "about-me", "person"],
+    ["Projects", "projects", "project"],
+    ["Skills", "skills", "skill"],
+    ["Education", "education", "education"],
+    ["Contact", "contact", "contact"]
   ]
 }

@@ -3,7 +3,7 @@ import usaFlag from "../assets/usaFlag.svg";
 import en from "../language/en.json";
 import es from "../language/es.json";
 
-export const LANGUAGE = {
+export const LANGUAGES = {
   es: {
     code: "es",
     name: "Español",

@@ -1,65 +1,77 @@
+import { useState } from "react";
 import useLocalStorage from "../hook/localStorage";
 import { useLanguage } from "../hook/useContext";
-import { getJsonLanguage, LANGUAGE } from "../util/language";
+import { getJsonLanguage, LANGUAGES } from "../util/language";
+import { useEffect } from "react";
+import { useRef } from "react";
 
 function LanguageSelector() {
-  const [, setLanguage] = useLocalStorage("language", getJsonLanguage("en"));
+  const [language, setLanguage] = useLocalStorage(
+    "language",
+    getJsonLanguage("en")
+  );
+  const selectedLanguage = language.LANGUAGE_CODE;
   const { changeLanguage } = useLanguage();
+  const [isOpen, setIsOpen] = useState(false);
+  const selectorRef = useRef(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (selectorRef.current && !selectorRef.current.contains(event.target)) {
+        setIsOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   function handleLanguage(code) {
     const languageJson = getJsonLanguage(code);
-    setLanguage(languageJson);
     changeLanguage(languageJson);
+    setLanguage(languageJson);
+    setIsOpen(false);
   }
   return (
-    <div>
-      <select
-        onChange={(e) => handleLanguage(e.target.value)}
-        name="language"
-        id="language"
+    <div ref={selectorRef} className="relative">
+      <div
+        onClick={() => setIsOpen(!isOpen)}
+        className="flex cursor-pointer align-middle justify-between group"
       >
-        {/* {LANGUAGE.map(([code, name, flag]) => (
-          <option key={code} value={code}>
-            <img src={flag} alt="Flag image" />
-            {name}
-          </option>
-        ))} */}
+        <div className="flex items-center"></div>
+        <img
+          src={LANGUAGES[selectedLanguage].flag}
+          alt={`${LANGUAGES[selectedLanguage].name} flag`}
+          className="w-6 mr-1"
+        />
+        <span className=" text-black dark:text-white  group-hover:text-primary-color">▼</span>
+      </div>
 
-        {Object.entries(LANGUAGE).map(([key, { code, name, flag }]) => (
-          <option key={key} value={code}>{name}</option>
-        ))}
-
-        {/* <option value="es"></option>
-        <option value="en"></option> */}
-      </select>
+      {/* Menu */}
+      {isOpen && (
+        <div
+          className="absolute botton-0 left-0 w-28 z-10 border-2 dark:bg-black dark:text-slate-500 border-r-4 border-slate-500
+          shadow-blue-500 shadow-sm"
+        >
+          {Object.entries(LANGUAGES).map(([key, { code, name, flag }]) => (
+            <div
+              key={key}
+              onClick={() => handleLanguage(code)}
+              className={`cursor-pointer flex items-center p-2
+                dark:text-slate-700 text-gray-300 hover:bg-slate-700 dark:hover:bg-gray-500 ${
+                  selectedLanguage === code
+                    ? "dark:bg-gray-300 bg-slate-950"
+                    : "dark:bg-white bg-slate-900"
+                }`}
+            >
+              <img src={flag} alt={`${name} flag`} className="w-6 mr-2" />
+              <span>{name}</span>
+            </div>
+          ))}
+        </div>
+      )}
     </div>
-    //     <div className="relative inline-block text-left">
-    //       <div className="group text-white rounded-md text-xs font-semibold bg-black/30 hover:bg-black/70 transition-all">
-    //         <button
-    //           type="button"
-    //           className="inline-flex justify-start items-center w-full gap-x-2 px-3 py-2"
-    //           aria-expanded="true"
-    //           aria-haspopup="true"
-    //           onClick={() => handleMesa(JSON.stringify(LANGUAGES))}
-    //         >
-    //           {/* <currentLocaleData.flag /> */}
-    //           Languaje jaja
-    //           {/* <ChevronIcon /> */}
-    //         </button>
-    //         <ul className="group-hover:block group-hover:animate-fade-down group-hover:animate-duration-200 hidden pt-0.5 absolute w-full">
-    //           <li className="py-[2px]">
-    //             <a className="rounded-md bg-black/30 hover:bg-black/70 whitespace-no-wrap inline-flex justify-start items-center w-full gap-x-2 px-3 py-2">
-    //               Bandera Spani
-    //             </a>
-    //           </li>
-    //           <li className="py-[2px]">
-    //             <a className="rounded-md bg-black/30 hover:bg-black/70 whitespace-no-wrap inline-flex justify-start items-center w-full gap-x-2 px-3 py-2">
-    //               Bandera Spani
-    //             </a>
-    //           </li>
-    //         </ul>
-    //       </div>
-    //     </div>
   );
 }
 

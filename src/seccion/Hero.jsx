@@ -1,8 +1,9 @@
 function Hero(){
     return(
-        <div className="text-red-400 dark:text-blue-600">
+        <section className="flex pt-52 text-red-400 min-h-screen dark:text-blue-600">
             Soy el hero
-        </div>
+            SASFASS
+        </section>
     );
 }
 
