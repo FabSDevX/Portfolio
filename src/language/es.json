@@ -1,0 +1,11 @@
+{
+    "hello": "hello",
+    "HEADER_NAVBAR": [
+      ["About me", "/dashboard"],
+      ["Projects", "/team"],
+      ["Skils", "/projects"],
+      ["Education", "/reports"],
+      ["Contact", "/reports"]
+    ]
+  }
+  

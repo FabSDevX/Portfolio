@@ -1,10 +1,40 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite + React</title>
+    <script>
+      (function () {
+        try {
+          if (typeof window.localStorage === "undefined") return;
+          const rootElement = document.documentElement;
+
+          if ("theme" in localStorage) {
+            switch (JSON.parse(localStorage.theme)) {
+              case "dark":
+                rootElement.setAttribute("data-theme", "dark");
+                break;
+
+              default:
+                rootElement.setAttribute("data-theme", "light");
+                break;
+            }
+          } else {
+            if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+              rootElement.setAttribute("data-theme", "dark");
+              localStorage.theme = "dark";
+            } else {
+              rootElement.setAttribute("data-theme", "light");
+              localStorage.theme = "light";
+            }
+          }
+        } catch (error) {
+          console.error("Error al configurar el estado inicial:", error);
+        }
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>
