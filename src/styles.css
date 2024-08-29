@@ -26,7 +26,7 @@ a:hover {
 }
 
 body {
-  background-image: radial-gradient(hsla(0, 0%, 58%, .3) 1px, transparent 0);
+  background-image: radial-gradient(hsla(0, 0%, 58%, 0.3) 1px, transparent 0);
   background-size: 30px 30px;
 }
 
@@ -52,4 +52,56 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+
+.fade-in-up {
+  animation: fadeInUp 1s ease-out;
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.pulsation-scale {
+  animation: pulsationScale 1s infinite alternate;
+}
+
+@keyframes pulsationScale {
+  from {
+    scale: 1;
+  }
+  to {
+    scale: 1.35;
+  }
+}
+
+.hand-touches {
+  animation: touchesPointer 0.5s infinite alternate;
+}
+@keyframes touchesPointer {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-10px);
+  }
+}
+
+.vanish-hand {
+  animation: vanishHand 1s forwards;
+}
+@keyframes vanishHand {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    display: none;
+  }
 }

@@ -39,7 +39,7 @@ function NavbarMobile({ language }) {
             spy={true}
             smooth={true}
             offset={-130}
-            duration={100}
+            duration={400}
           >
             <ListItem disablePadding>
               <ListItemButton>
