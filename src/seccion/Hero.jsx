@@ -4,10 +4,9 @@ import { FiGithub } from "react-icons/fi";
 import { useLanguage } from "../hook/useContext";
 import { IoDocumentTextSharp } from "react-icons/io5";
 import { FaHandPointDown } from "react-icons/fa";
+import { useEffect, useState } from "react";
 import herobg from "../assets/herobg.svg";
 import HeroButton from "../component/HeroButton";
-import { useState } from "react";
-import { useEffect } from "react";
 
 function Hero() {
   const [schollPosition, setScrollPosition] = useState(window.scrollY);

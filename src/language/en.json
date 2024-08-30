@@ -82,5 +82,9 @@
     {
       "text": "and testing."
     }
-  ]
+  ],
+  "PROJECTS_TITLE": "Projects",
+  "PROJECTS_PREVIEW": "Preview",
+  "PROJECTS_WORKING": "Working",
+  "PROJECTS_DEPLOYED": "Deployed"
 }
