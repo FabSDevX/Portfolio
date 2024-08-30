@@ -86,5 +86,9 @@
   "PROJECTS_TITLE": "Projects",
   "PROJECTS_PREVIEW": "Preview",
   "PROJECTS_WORKING": "Working",
-  "PROJECTS_DEPLOYED": "Deployed"
+  "PROJECTS_DEPLOYED": "Deployed",
+  "EDUCATION_TITLE": "Education",
+  "EDUCATION_UNIVERSITY" : "University",
+  "EDUCATION_CERTIFICATION" : "Certifications",
+  "EDUCATION_CONCENTRATION" : "Concentrations:"
 }
