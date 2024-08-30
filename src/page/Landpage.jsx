@@ -2,6 +2,7 @@ import Hero from "../seccion/Hero";
 import GeneralLayout from "../layout/GeneralLayout";
 import AboutMe from "../seccion/AboutMe";
 import Project from "../seccion/Project";
+import Skills from "../seccion/Skills";
 
 function Landpage() {
   return (
@@ -10,6 +11,7 @@ function Landpage() {
         <Hero />
         <AboutMe/>
         <Project/>
+        <Skills/>
       </main>
     </GeneralLayout>
   );
