@@ -1,15 +1,86 @@
 {
   "LANGUAGE_CODE": "en",
   "HEADER_NAVBAR": [
-    ["About me", "about-me", "person"],
-    ["Projects", "projects", "project"],
-    ["Skills", "skills", "skill"],
-    ["Education", "education", "education"],
-    ["Contact", "contact", "contact"]
+    [
+      "About me",
+      "about-me",
+      "person"
+    ],
+    [
+      "Projects",
+      "projects",
+      "project"
+    ],
+    [
+      "Skills",
+      "skills",
+      "skill"
+    ],
+    [
+      "Education",
+      "education",
+      "education"
+    ],
+    [
+      "Contact",
+      "contact",
+      "contact"
+    ]
   ],
   "HERO_GREETINGS": "Hello, I'm",
   "HERO_IS_OPEN_TO_WORK": true,
   "HERO_OPEN_TO_WORK": "Open to work",
   "HERO_NOT_OPEN_TO_WORK": "Already working",
-  "HERO_IMAGE_BOTTON_TEXT": "Transforming ideas into digital reality"
+  "HERO_IMAGE_BOTTON_TEXT": "Transforming ideas into digital reality",
+  "ABOUT_ME_TITLE": "About me",
+  "ABOUT_ME_PARAGRAPH_1": [
+    {
+      "text": "My name is "
+    },
+    {
+      "text": "Fabricio Porras",
+      "highlight": true
+    },
+    {
+      "text": ". My journey into programming began at the age of 17 when I discovered coding in TEC university. I am currently a "
+    },
+    {
+      "text": "Computer Engineering",
+      "highlight": true
+    },
+    {
+      "text": " student with over 4 years of academic experience in the software development industry."
+    }
+  ],
+  "ABOUT_ME_PARAGRAPH_2": [
+    {
+      "text": "I've had the opportunity to "
+    },
+    {
+      "text": "collaborate on projects that have expanded my knowledge and skills",
+      "highlight": true
+    },
+    {
+      "text": ", such as "
+    },
+    {
+      "text": "Alma Luna Villa Arenal and G'nails. ",
+      "highlight": true
+    },
+    {
+      "text": "Although I'm still in the learning phase, I strive to lead with responsibility and foster a positive work environment in every team I work with."
+    }
+  ],
+  "ABOUT_ME_PARAGRAPH_3": [
+    {
+      "text": "I've been dedicating 365 days a year to staying ahead of technological advancements. With effective time management, enhance critical thinking and "
+    },
+    {
+      "text": "consistently strive for optimal solutions implementing best practices in coding ",
+      "highlight": true
+    },
+    {
+      "text": "and testing."
+    }
+  ]
 }
