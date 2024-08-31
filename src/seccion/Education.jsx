@@ -16,7 +16,6 @@ function Education() {
                 setUniversity(documentEducation.university);
                 setCertification(documentEducation.certification);
                 setIsFetch(true);
-                console.log(documentEducation.university);
             } catch (error) {
                 console.error("Error fetching education data ", error);
             }

@@ -90,5 +90,14 @@
   "EDUCATION_TITLE": "Education",
   "EDUCATION_UNIVERSITY" : "University",
   "EDUCATION_CERTIFICATION" : "Certifications",
-  "EDUCATION_CONCENTRATION" : "Concentrations:"
+  "EDUCATION_CONCENTRATION" : "Concentrations:",
+  "CONTACT_TITLE" : "Contact me",
+  "CONTACT_PERSONAL_INFORMATION": "Personal contact",
+  "CONTACT_SEND_ME_MESSAGE": "Send me a message",
+  "CONTACT_FORM_NAME": "Name",
+  "CONTACT_FORM_EMAIL": "Email",
+  "CONTACT_FORM_COMMENT": "Comment",
+  "CONTACT_FORM_SEND": "Send",
+  "FOOTER_COPYRIGHT": "© All rights reserved Fabricio Porras",
+  "FOOTER_PHRASE": "Making dreams come true "
 }

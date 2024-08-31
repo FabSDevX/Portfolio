@@ -1,5 +1,6 @@
 import propTypes from "prop-types";
 import Navbar from "../component/navBar";
+import Footer from "../component/Footer";
 
 function GeneralLayout({ children }) {
   return (
@@ -9,6 +10,7 @@ function GeneralLayout({ children }) {
       <div className="max-w-5xl mx-auto">
         {children}
       </div>
+      <Footer/>
     </div>
   );
 }
