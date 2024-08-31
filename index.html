@@ -1,44 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React</title>
-    <script>
-      (function () {
-        try {
-          if (typeof window.localStorage === "undefined") return;
-          const rootElement = document.documentElement;
 
-          if ("theme" in localStorage) {
-            switch (JSON.parse(localStorage.theme)) {
-              case "dark":
-                rootElement.setAttribute("data-theme", "dark");
-                break;
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vite + React</title>
+  <script>
+    (function () {
+      try {
+        if (typeof window.localStorage === "undefined") return;
+        const rootElement = document.documentElement;
 
-              default:
-                rootElement.setAttribute("data-theme", "light");
-                break;
-            }
-          } else {
-            if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+        if ("theme" in localStorage) {
+          const theme = JSON.parse(window.localStorage.getItem("theme"))
+          switch (theme) {
+            case "dark":
               rootElement.setAttribute("data-theme", "dark");
-              localStorage.theme = "dark";
-            } else {
+              break;
+
+            default:
               rootElement.setAttribute("data-theme", "light");
-              localStorage.theme = "light";
-            }
+              break;
           }
-        } catch (error) {
-          console.error("Error al configurar el estado inicial:", error);
+        } else {
+          if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+            rootElement.setAttribute("data-theme", "dark");
+            window.localStorage.setItem("theme", JSON.stringify("dark"));
+          } else {
+            rootElement.setAttribute("data-theme", "light");
+            window.localStorage.setItem("theme", JSON.stringify("light"));
+          }
         }
-      })();
-    </script>
-  </head>
-  <body class="relative h-full w-full overflow-x-hidden dark:bg-bg-dark-theme bg-white" >
-    <div id="root">
-      <script type="module" src="/src/main.jsx"></script>
-    </div>
-  </body>
+      } catch (error) {
+        console.error("Error al configurar el estado inicial:", error);
+      }
+    })();
+  </script>
+</head>
+
+<body class="relative h-full w-full overflow-x-hidden dark:bg-bg-dark-theme bg-white">
+  <div id="root">
+    <script type="module" src="/src/main.jsx"></script>
+  </div>
+</body>
+
 </html>

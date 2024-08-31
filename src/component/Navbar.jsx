@@ -34,7 +34,7 @@ function Navbar() {
       <div className="flex justify-between py-3 px-4 lg:px-0 place-items-center max-w-5xl mx-auto">
         <a
           translate="no"
-          className="dark:text-white lg:text-3xl md:text-xl text-2xl cursor-pointer hover:text-primary-color"
+          className="dark:text-white text-secondary-dark-theme-color lg:text-3xl md:text-xl text-2xl cursor-pointer hover:text-primary-color"
           onClick={scrollToTop}
         >
           Fabricio Porras
@@ -43,13 +43,14 @@ function Navbar() {
           <nav className="flex sm:space-x-1 md:space-x-4 place-items-center">
             {headerNavbar.map(([title, id]) => (
               <Link
-                className="px-1 py-1 cursor-pointer dark:text-white text-slate-700 font-medium hover:text-primary-color hover:border-b-2 hover:border-b-primary-color "
+                className="px-1 py-1 cursor-pointer dark:text-white text-secondary-dark-theme-color font-medium hover:text-primary-color hover:border-b-2 hover:border-b-primary-color "
                 to={id}
                 key={id}
                 spy={true}
                 smooth={true}
-                offset={-130}
+                offset={-100}
                 duration={500}
+                activeClass="nav-active"
               >
                 {title}
               </Link>

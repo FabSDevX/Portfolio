@@ -76,7 +76,7 @@ function NavbarMobile({ language }) {
         className="bg-transparent border-0 focus:outline-0"
         onClick={toggleDrawer(true)}
       >
-        <GiHamburgerMenu size={32} color={isDark ? "white" : "black"} />
+        <GiHamburgerMenu size={32} className="text-secondary-dark-theme-color dark:text-white" />
       </button>
       <Drawer open={open} anchor="right" onClose={toggleDrawer(false)}>
         {DrawerList}

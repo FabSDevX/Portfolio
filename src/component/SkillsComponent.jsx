@@ -6,10 +6,10 @@ function SkillsComponent({ SvgIcon, title, colorHover }) {
             style={{ '--hover-color': colorHover }}
         >
             <SvgIcon
-                className={"group-hover:fill-[var(--hover-color)]"} 
+                className={"text-darkTheme-button-background dark:text-white group-hover:fill-[var(--hover-color)]"} 
                 size={80}
             />
-            <span className='text-center'>{title}</span>
+            <span className='text-darkTheme-button-background dark:text-white text-center'>{title}</span>
         </div>
     );
 }

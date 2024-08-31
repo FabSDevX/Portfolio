@@ -24,18 +24,18 @@ function ProjectCard({ title, description, tags, img, isWorking = true, github, 
     }, [img]);
     return (
         <div className="sm:flex gap-8">
-            <figure className="w-11/12 max-h-72 flex bg-white rounded-xl">
+            <figure className="w-11/12 max-h-72 flex bg-slate-700 dark:bg-white rounded-xl">
                 <img className="rounded-xl" src={imageSrc} alt="Project image" />
             </figure>
             <div className="w-11/12">
                 <div className="flex mt-3 sm:mt-0 flex-col gap-3 mb-8">
-                    <h3 className="text-3xl sm:text-2xl md:text-3xl">{title}</h3>
+                    <h3 className="text-secondary-dark-theme-color dark:text-white text-3xl sm:text-2xl md:text-3xl">{title}</h3>
                     <ul className="flex flex-wrap gap-3">
                         {tags.map((title, index) => (
-                            <li className="dark:bg-secondary-dark-theme-color dark:text-primary-color p-1 rounded-md" key={index}>{title}</li>
+                            <li className="bg-secondary-dark-theme-color text-primary-color p-1 rounded-md" key={index}>{title}</li>
                         ))}
                     </ul>
-                    <p className="dark:text-dark-text-paragraph-color">
+                    <p className="text-bg-dark-theme dark:text-dark-text-paragraph-color">
                         {description}
                     </p>
                 </div>
@@ -55,14 +55,14 @@ function ProjectCard({ title, description, tags, img, isWorking = true, github, 
                     />)}
 
                     {isWorking ? (
-                        <p className="flex gap-1 items-center dark:text-dark-text-paragraph-color">
+                        <p className="flex gap-1 items-center text-bg-dark-theme dark:text-dark-text-paragraph-color">
                             <span className="w-3 ">
                                 <GoDotFill className="fill-primary-color" />
                             </span>
                             {language.PROJECTS_WORKING}
                         </p>
                     ) : (
-                        <p className="flex gap-1 items-center dark:text-dark-text-paragraph-color">
+                        <p className="flex gap-1 items-center text-bg-dark-theme dark:text-dark-text-paragraph-color">
                             <span className="w-3 ">
                                 <GoDotFill className="fill-green-500" />
                             </span>

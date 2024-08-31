@@ -5,7 +5,9 @@ import { useLanguage } from "../hook/useContext";
 import { IoDocumentTextSharp } from "react-icons/io5";
 import { FaHandPointDown } from "react-icons/fa";
 import { useEffect, useState } from "react";
-import herobg from "../assets/herobg.svg";
+import { animateScroll } from "react-scroll";
+import { getDocumentById } from "../services/firebase/firebaseFuntions";
+import bgHero from "../assets/bgHero.jpg";
 import HeroButton from "../component/HeroButton";
 
 function Hero() {
@@ -13,7 +15,7 @@ function Hero() {
   const isHanded = schollPosition == 0;
 
   const { language } = useLanguage();
-  const openToWork = language.HERO_IS_OPEN_TO_WORK;
+  const [isOpenToWork, setIsOpenToWork] = useState(true);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -27,37 +29,53 @@ function Hero() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  const scrollToBotton = () => {
+    animateScroll.scrollToBottom();
+  };
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const documentSettings = await getDocumentById('settings', 'general');
+        setIsOpenToWork(documentSettings.isOpenToWork)
+      } catch (error) {
+        console.error("Error fetching settings data ", error);
+      }
+    }
+    fetchData();
+  }, [])
   return (
     <section className="flex relative items-center justify-between text-red-400 min-h-screen dark:text-white font-semibold fade-in-up px-4 gap-5 lg:px-0">
       {isHanded ? (
-        <div className="absolute bottom-2 left-2/4 hand-touches">
+        <div onClick={scrollToBotton} className="absolute cursor-pointer bottom-2 left-2/4 hand-touches">
           <FaHandPointDown className="fill-primary-color" size={32} />
         </div>
       ) : (
-        <div className="absolute bottom-2 left-2/4 vanish-hand">
+        <div onClick={scrollToBotton} className="absolute cursor-pointer bottom-2 left-2/4 vanish-hand">
           <FaHandPointDown className="fill-primary-color" size={32} />
         </div>
       )}
       <div>
         <div className="flex flex-col gap-8 relative py-8">
-          <h1 className="lg:text-5xl md:text-4xl sm:text-3xl text-5xl">
+          <h1 className="text-secondary-dark-theme-color dark:text-white lg:text-5xl md:text-4xl sm:text-3xl text-5xl">
             {language.HERO_GREETINGS}
             <br />
             Fabricio Porras
           </h1>
-          <h2 className="dark:text-primary-color lg:text-4xl md:text-3xl sm:text-2xl text-4xl font-medium">
+          <h2 className="text-primary-color lg:text-4xl md:text-3xl sm:text-2xl text-4xl font-medium">
             Software Developer
           </h2>
           <div className="absolute bottom-0 right-0 -rotate-12 ">
-            {openToWork ? (
-              <p className="flex gap-1 items-center text-dark-text-paragraph-color pulsation-scale">
+            {isOpenToWork ? (
+              <p className="flex gap-1 items-center text-bg-dark-theme dark:text-dark-text-paragraph-color pulsation-scale">
                 <span className="w-3 ">
                   <GoDotFill className="fill-green-500" />
                 </span>
                 {language.HERO_OPEN_TO_WORK}
               </p>
             ) : (
-              <p className="flex gap-1 items-center text-dark-text-paragraph-color pulsation-scale">
+              <p className="flex gap-1 items-center text-bg-dark-theme dark:text-dark-text-paragraph-color pulsation-scale">
                 <span className="w-3 ">
                   <GoDotFill className="fill-red-500" />
                 </span>
@@ -88,7 +106,7 @@ function Hero() {
       </div>
       <div className="hidden sm:flex flex-col justify-center items-center gap-2">
         <figure className="w-64 md:w-80 lg:w-96">
-          <img src={herobg} alt="hero background" />
+          <img className="rounded-xl border-2 dark:border-slate-800 shadow-lg dark:shadow-slate-600 shadow-slate-800" src={bgHero} alt="hero background" />
         </figure>
         <span className="text-primary-color font-medium text-sm md:text-lg lg:text-xl">
           {language.HERO_IMAGE_BOTTON_TEXT}

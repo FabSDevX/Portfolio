@@ -25,14 +25,14 @@ function Education() {
 
     return (
         <section id="education" className="flex mt-9 flex-col min-h-screen font-semibold fade-in-up px-4 gap-5 lg:px-0">
-            <h2 className="w-fit pt-2.5 relative text-4xl text-bg-dark-theme dark:text-white"><FaGraduationCap size={28} className="absolute top-0 right-8 rotate-12 dark:fill-gray-200 text-bg-dark-themedark:text-white" /> {language.EDUCATION_TITLE}</h2>
+            <h2 className="w-fit pt-2.5 relative text-4xl text-secondary-dark-theme-color dark:text-white"><FaGraduationCap size={28} className="absolute top-0 right-8 rotate-12 dark:fill-gray-200 text-bg-dark-themedark:text-white" /> {language.EDUCATION_TITLE}</h2>
             {isFetch && (<div>
                 <div>
-                    <h3 className="text-darkTheme-button-background dark:text-white text-3xl my-4 font-semibold">{language.EDUCATION_UNIVERSITY}</h3>
+                    <h3 className="text-secondary-dark-theme-color dark:text-white text-3xl my-4 font-semibold">{language.EDUCATION_UNIVERSITY}</h3>
                     <EducationCard formation={university} />
                 </div>
                 <div>
-                    <h3 className="text-darkTheme-button-background dark:text-white text-3xl my-4 font-semibold">{language.EDUCATION_CERTIFICATION}</h3>
+                    <h3 className="text-secondary-dark-theme-color dark:text-white text-3xl my-4 font-semibold">{language.EDUCATION_CERTIFICATION}</h3>
                     <EducationCard formation={certification} />
                 </div>
             </div>)}

@@ -19,7 +19,7 @@ function Project() {
 
     return (
         <section id="projects" className="flex mt-9 sm:mt-0 flex-col min-h-screen font-semibold fade-in-up px-4 gap-5 lg:px-0">
-            <h2 className="flex items-center gap-x-2 text-4xl"><FaFolder /> {title}</h2>
+            <h2 className="flex items-center gap-x-2 text-4xl text-secondary-dark-theme-color dark:text-white"><FaFolder /> {title}</h2>
             <div className="flex mt-4 flex-col gap-9">
                 {projects.map((project, index) => (
                     <ProjectCard

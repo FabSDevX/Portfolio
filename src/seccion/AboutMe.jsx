@@ -10,12 +10,12 @@ function AboutMe() {
   const p3 = language.ABOUT_ME_PARAGRAPH_3;
 
   return (
-    <section id="about-me" className="flex flex-col min-h-screen relative text-red-400 dark:text-white font-semibold fade-in-up px-4 gap-5 lg:px-0">
+    <section id="about-me" className="flex flex-col min-h-screen relative text-secondary-dark-theme-color dark:text-white font-semibold fade-in-up px-4 gap-5 lg:px-0">
       <h2 className="flex gap-x-2 
       text-4xl"><IoPerson /> {title}</h2>
       <div className="flex flex-col-reverse sm:flex-row gap-x-6">
 
-        <div className="flex flex-col sm:w-9/12 gap-5 sm:text-lg md:text-xl text-dark-text-paragraph-color">
+        <div className="flex flex-col sm:w-9/12 gap-5 sm:text-lg md:text-xl text-bg-dark-theme dark:text-dark-text-paragraph-color">
           <p className="break-words">
             {p1.map((item, index) =>
               item.highlight ? (
@@ -41,7 +41,7 @@ function AboutMe() {
           )}</p>
         </div>
         <div className="flex my-auto mb-6 sm:mb-auto sm:ml-auto sm:mr-0 w-56 h-56 border-8 border-slate-800 rounded-lg sm:rotate-6">
-          <img className="rounded-md" src={profile} alt="User image" />
+          <img src={profile} alt="User image" />
         </div>
       </div>
     </section>

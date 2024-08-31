@@ -31,13 +31,13 @@ function Contact() {
 
     return (
         <section id="contact" className="flex mt-9 flex-col font-semibold fade-in-up px-4 gap-5 lg:px-0">
-            <h2 className="w-fit relative text-4xl text-bg-dark-theme dark:text-white"><IoMdContact size={19} className="absolute bottom-1 left-6 dark:fill-gray-200 text-bg-dark-themedark:text-white" /> {language.CONTACT_TITLE}</h2>
+            <h2 className="w-fit relative text-4xl text-secondary-dark-theme-color dark:text-white"><IoMdContact size={19} className="absolute bottom-1 left-6 dark:fill-gray-200 text-bg-dark-themedark:text-white" /> {language.CONTACT_TITLE}</h2>
             <div className="flex flex-col-reverse sm:flex-row gap-7">
                 <div className=" sm:mt-0s sm:w-3/4 md:w-1/2">
-                    <h3 className="mb-2 text-xl">{language.CONTACT_SEND_ME_MESSAGE}</h3>
+                    <h3 className="mb-2 text-xl text-secondary-dark-theme-color dark:text-white">{language.CONTACT_SEND_ME_MESSAGE}</h3>
                     <form className="flex flex-col gap-5" onSubmit={handleSubmit}>
                         <TextField
-                            className="dark:bg-dark-text-paragraph-color rounded-md"
+                            className="bg-gray-300 dark:bg-dark-text-paragraph-color rounded-md"
                             type="text"
                             id="filled-basic"
                             name="name"
@@ -49,7 +49,7 @@ function Contact() {
                             onChange={handleChange}
                         />
                         <TextField
-                            className="dark:bg-dark-text-paragraph-color rounded-md"
+                            className="bg-gray-300 dark:bg-dark-text-paragraph-color rounded-md"
                             id="filled-basic"
                             variant="filled"
                             name="email"
@@ -60,7 +60,7 @@ function Contact() {
                             onChange={handleChange}
                         />
                         <TextField
-                            className="dark:bg-dark-text-paragraph-color rounded-md"
+                            className="bg-gray-300 dark:bg-dark-text-paragraph-color rounded-md"
                             id="filled-textarea"
                             variant="filled"
                             required
@@ -73,13 +73,13 @@ function Contact() {
                             value={formValues.comment}
                             onChange={handleChange}
                         />
-                        <button className="dark:text-gray-800 w-1/2 mx-auto dark:bg-dark-text-paragraph-color" type="submit">
+                        <button className="dark:text-gray-800 w-1/2 mx-auto dark:bg-dark-text-paragraph-color hover:bg-primary-color" type="submit">
                             {language.CONTACT_FORM_SEND}
                         </button>
                     </form>
                 </div>
                 <div className="flex flex-col">
-                    <h3 className="mb-2 text-xl">{language.CONTACT_PERSONAL_INFORMATION}</h3>
+                    <h3 className="mb-2 text-xl text-secondary-dark-theme-color dark:text-white">{language.CONTACT_PERSONAL_INFORMATION}</h3>
                     <div className="flex flex-col gap-10">
                         <div className="flex flex-wrap gap-10">
                             <HeroButton Icon={FaPhoneAlt} text={"+506 83719375"} isHiddenText={false} action={"https://wa.me/50683719375"} />

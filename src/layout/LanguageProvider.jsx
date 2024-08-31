@@ -12,7 +12,6 @@ function LanguageProvider({ children }) {
     "language",
     getJsonLanguage("en")
   );
-
   const languageRef = useRef({"language":language, "setLanguage":setLanguage})
   useEffect(() => {
     const fun = languageRef.current.setLanguage;
