@@ -1,5 +1,5 @@
 import propTypes from "prop-types";
-import Navbar from "../component/navBar";
+import Navbar from "../component/Navbar";
 import Footer from "../component/Footer";
 
 function GeneralLayout({ children }) {
