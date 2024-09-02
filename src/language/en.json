@@ -98,6 +98,9 @@
   "CONTACT_FORM_EMAIL": "Email",
   "CONTACT_FORM_COMMENT": "Comment",
   "CONTACT_FORM_SEND": "Send",
+  "CONTACT_LOADING": "Loading...",
+  "CONTACT_SUCCESFULL": "Succesfull",
+  "CONTACT_UNSUCCESFULL": "Sorry an error happened",
   "FOOTER_COPYRIGHT": "© All rights reserved Fabricio Porras",
   "FOOTER_PHRASE": "Making dreams come true "
 }

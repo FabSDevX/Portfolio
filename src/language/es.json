@@ -98,6 +98,9 @@
   "CONTACT_FORM_EMAIL": "Correo",
   "CONTACT_FORM_COMMENT": "Comentario",
   "CONTACT_FORM_SEND": "Enviar",
+  "CONTACT_LOADING": "Cargando...",
+  "CONTACT_SUCCESFULL": "Enviado",
+  "CONTACT_UNSUCCESFULL": "Ha ocurrido un error",
   "FOOTER_COPYRIGHT": "© Todos los derechos reservados Fabricio Porras",
   "FOOTER_PHRASE": "Haciendo los sueños realidad "
 }
