@@ -16,12 +16,40 @@ import {
  * @returns
  */
 export async function getDocumentById(collectionName, documentID) {
-    const docRef = doc(db, collectionName, documentID);
-    const docSnap = await getDoc(docRef);
-    if (docSnap.exists()) {
-        return docSnap.data();
-    } else {
-        console.error("No such document");
+    try {
+        const docRef = doc(db, collectionName, documentID);
+        const docSnap = await getDoc(docRef);
+        if (docSnap.exists()) {
+            return docSnap.data();
+        } else {
+            console.error("No such document");
+        }
+    } catch (error) {
+        console.error(error)
+    }
+}
+
+export async function getProjectById(collectionName, documentID) {
+    try {
+        const docRef = doc(db, collectionName, documentID);
+        const docSnap = await getDoc(docRef);
+        
+        if (docSnap.exists()) {
+            const data = docSnap.data();
+            
+            if (data && data.project && Array.isArray(data.project)) {
+                // Sort the list of projects by the `order` parameter
+                data.project.sort((a, b) => a.order - b.order);
+            }
+            
+            return data;
+        } else {
+            console.error("No such document");
+            return null;
+        }
+    } catch (error) {
+        console.error(error);
+        return null;
     }
 }
 
@@ -42,7 +70,6 @@ export async function getAllDocuments(collectionName) {
         return [];
     }
 }
-
 
 /**
 * Function to get an image from firebase path
