@@ -5,7 +5,7 @@ import LanguageSelector from "./LanguageSelector";
 import ThemeSelector from "./ThemeSelector";
 import NavbarMobile from "./NavBarMobile";
 
-function Navbar() {
+function NavbarDesk() {
   const [isMinimumSize, setIsMinimumSize] = useState(window.innerWidth < 700);
   const { language } = useLanguage();
   const headerNavbar = language.HEADER_NAVBAR;
@@ -65,4 +65,4 @@ function Navbar() {
     </header>
   );
 }
-export default Navbar;
+export default NavbarDesk;
