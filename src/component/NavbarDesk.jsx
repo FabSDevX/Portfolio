@@ -3,7 +3,7 @@ import { Link, animateScroll } from "react-scroll";
 import { useLanguage } from "../hook/useContext";
 import LanguageSelector from "./LanguageSelector";
 import ThemeSelector from "./ThemeSelector";
-import NavbarMobile from "./NavBarMobile";
+import NavbarMobile from "./NavbarMobile";
 
 function NavbarDesk() {
   const [isMinimumSize, setIsMinimumSize] = useState(window.innerWidth < 700);
