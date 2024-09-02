@@ -10,7 +10,7 @@ function AboutMe() {
   const p3 = language.ABOUT_ME_PARAGRAPH_3;
 
   return (
-    <section id="about-me" className="flex flex-col min-h-screen relative text-secondary-dark-theme-color dark:text-white font-semibold fade-in-up px-4 gap-5 lg:px-0">
+    <section id="about-me" className="flex flex-col relative text-secondary-dark-theme-color dark:text-white font-semibold fade-in-up px-4 gap-5 lg:px-0">
       <h2 className="flex gap-x-2 
       text-4xl"><IoPerson /> {title}</h2>
       <div className="flex flex-col-reverse sm:flex-row gap-x-6">

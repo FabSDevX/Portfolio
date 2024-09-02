@@ -1,11 +1,103 @@
 {
-  "hello": "hola",
   "LANGUAGE_CODE": "es",
   "HEADER_NAVBAR": [
-    ["Sobre mi", "about-me", "person"],
-    ["Proyectos", "projects", "project"],
-    ["Skills", "skills", "skill"],
-    ["Educación", "education", "education"],
-    ["Contacto", "contact", "contact"]
-  ]
+    [
+      "Sobre mi",
+      "about-me",
+      "person"
+    ],
+    [
+      "Projectos",
+      "projects",
+      "project"
+    ],
+    [
+      "Skills",
+      "skills",
+      "skill"
+    ],
+    [
+      "Educación",
+      "education",
+      "education"
+    ],
+    [
+      "Contacto",
+      "contact",
+      "contact"
+    ]
+  ],
+  "HERO_GREETINGS": "Hola, soy",
+  "HERO_OPEN_TO_WORK": "Abierto a oportunidades",
+  "HERO_RESUME": "Curriculum",
+  "HERO_NOT_OPEN_TO_WORK": "Trabajando",
+  "HERO_IMAGE_BOTTON_TEXT": "Transformando ideas en realidad digital",
+  "ABOUT_ME_TITLE": "Sobre mi",
+  "ABOUT_ME_PARAGRAPH_1": [
+    {
+      "text": "Mi nombre es "
+    },
+    {
+      "text": "Fabricio Porras.",
+      "highlight": true
+    },
+    {
+      "text": " Mi recorrido en la programación comenzó a los 17 años cuando descubrí la codificación en el Instituto Tecnológico de Costa Rica. Actualmente soy estudiante de "
+    },
+    {
+      "text": "Ingeniería en Computación",
+      "highlight": true
+    },
+    {
+      "text": " con más de 4 años de experiencia académica en la industria del desarrollo de software."
+    }
+  ],
+  "ABOUT_ME_PARAGRAPH_2": [
+    {
+      "text": "He tenido la oportunidad de "
+    },
+    {
+      "text": "colaborar en proyectos que han expandido mis conocimientos y habilidades",
+      "highlight": true
+    },
+    {
+      "text": ", tales como "
+    },
+    {
+      "text": "Alma Luna Villa Arenal y G'nails. ",
+      "highlight": true
+    },
+    {
+      "text": "Aunque aún me encuentro en fase de aprendizaje, me esfuerzo por liderar con responsabilidad y fomentar un ambiente de trabajo positivo en cada equipo con el que colaboro."
+    }
+  ],
+  "ABOUT_ME_PARAGRAPH_3": [
+    {
+      "text": "He estado dedicando 365 días al año a mantenerme al tanto de los avances tecnológicos. Con una buena gestión del tiempo, mejoro el pensamiento crítico y "
+    },
+    {
+      "text": "me esfuerzo constantemente por encontrar soluciones óptimas implementando las mejores prácticas en codificación ",
+      "highlight": true
+    },
+    {
+      "text": "y pruebas."
+    }
+  ],
+  "PROJECTS_TITLE": "Proyectos",
+  "PROJECTS_PREVIEW": "Prevista",
+  "PROJECTS_WORKING": "Trabajando",
+  "PROJECTS_DEPLOYED": "Desplegado",
+  "EDUCATION_TITLE": "Educación",
+  "EDUCATION_UNIVERSITY" : "Universidad",
+  "EDUCATION_CERTIFICATION" : "Certificaciones",
+  "EDUCATION_CONCENTRATION" : "Concentraciones:",
+  "CONTACT_TITLE" : "Contactame",
+  "CONTACT_PERSONAL_INFORMATION": "Contacto personal",
+  "CONTACT_SEND_ME_MESSAGE": "Envíame un mensaje",
+  "CONTACT_FORM_NAME": "Nombre",
+  "CONTACT_FORM_EMAIL": "Correo",
+  "CONTACT_FORM_COMMENT": "Comentario",
+  "CONTACT_FORM_SEND": "Enviar",
+  "FOOTER_COPYRIGHT": "© Todos los derechos reservados Fabricio Porras",
+  "FOOTER_PHRASE": "Haciendo los sueños realidad "
 }

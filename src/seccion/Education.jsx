@@ -24,7 +24,7 @@ function Education() {
     }, [])
 
     return (
-        <section id="education" className="flex mt-9 flex-col min-h-screen font-semibold fade-in-up px-4 gap-5 lg:px-0">
+        <section id="education" className="flex mt-16 flex-col font-semibold fade-in-up px-4 gap-5 lg:px-0">
             <h2 className="w-fit pt-2.5 relative text-4xl text-secondary-dark-theme-color dark:text-white"><FaGraduationCap size={28} className="absolute top-0 right-8 rotate-12 dark:fill-gray-200 text-bg-dark-themedark:text-white" /> {language.EDUCATION_TITLE}</h2>
             {isFetch && (<div>
                 <div>

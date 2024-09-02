@@ -49,20 +49,20 @@ function ProjectCard({ title, description, tags, img, isWorking = true, github, 
 
                     {preview.isPreview && (<HeroButton
                         Icon={FaLink}
-                        text={language.PROJECTS_TITLE}
+                        text={language.PROJECTS_PREVIEW}
                         action={preview.link}
                         isHiddenText={false}
                     />)}
 
                     {isWorking ? (
-                        <p className="flex gap-1 items-center text-bg-dark-theme dark:text-dark-text-paragraph-color">
+                        <p className="flex gap-1 sm:ml-auto mr-3 items-center text-bg-dark-theme dark:text-dark-text-paragraph-color">
                             <span className="w-3 ">
                                 <GoDotFill className="fill-primary-color" />
                             </span>
                             {language.PROJECTS_WORKING}
                         </p>
                     ) : (
-                        <p className="flex gap-1 items-center text-bg-dark-theme dark:text-dark-text-paragraph-color">
+                        <p className="flex gap-1 sm:ml-auto mr-3 items-center text-bg-dark-theme dark:text-dark-text-paragraph-color">
                             <span className="w-3 ">
                                 <GoDotFill className="fill-green-500" />
                             </span>

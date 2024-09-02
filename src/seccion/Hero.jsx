@@ -87,7 +87,7 @@ function Hero() {
         <div className="flex flex-wrap mt-5 gap-5 sm:gap-3 ">
           <HeroButton
             Icon={IoDocumentTextSharp}
-            text={"Resume"}
+            text={language.HERO_RESUME}
             action={
               "https://drive.google.com/file/d/1U4r5vf6stAyl_5dStgQKkhUlfIfvjRcF/view?usp=sharing"
             }
